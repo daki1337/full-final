@@ -1,0 +1,51 @@
+@use "/src/common/styles/colors" as *;
+
+.filters-form label {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.price-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.price-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+
+  &::placeholder {
+    color: #999;
+    font-style: italic;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: #666;
+  }
+}
+
+.no-categories {
+  color: #999;
+  font-style: italic;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+.price-input {
+  width: 100px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  
+  &::placeholder {
+    color: #999;
+    font-size: 14px;
+  }
+}

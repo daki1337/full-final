@@ -1,0 +1,63 @@
+@use "/src/common/styles/colors" as *;
+.wrapper {
+  min-width: 560px;
+  max-width: 1300px;
+  width: 95%;
+  margin: auto;
+  padding-top: 40px;
+  position: relative;
+
+  table {
+    width: 100%;
+    margin: 8px 0;
+    border-collapse: collapse;
+    th,
+    td {
+      padding: 0.3em;
+      border: 1px solid #ccc;
+    }
+    th {
+      text-transform: capitalize;
+    }
+  }
+  form,
+  label {
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+  form {
+    padding: 1em;
+    box-shadow: 0 0 5px #ccc;
+    background-color: $white;
+    input {
+      padding: 0.5em;
+      border: 1px solid $grey100;
+    }
+    button {
+      background-color: $primary;
+      color: $white;
+    }
+  }
+}
+
+.products-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.products-content {
+  flex: 1;
+  padding-left: 25px;
+}
+@media (max-width: 600px) {
+  .products-content {
+    padding-left: 0;
+  }
+  .products-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+}

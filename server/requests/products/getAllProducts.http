@@ -1,0 +1,2 @@
+# GET http://localhost:3000/products?sale=false&amount=2 HTTP/1.1
+GET http://localhost:3000/products?availability=&categories=&maxPrice=&minPrice=&priceMin=8&sale= HTTP/1.1
