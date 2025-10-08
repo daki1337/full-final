@@ -8,10 +8,10 @@ const CONSTANTS = {
   JWT_EXPIRES: "7d",
   MAX_LIMIT_IMG: 3,
   UPLOAD_FOLDER: "uploads/",
-  UPLOAD_IMG_TYPES: [".jpg", ".jpeg", ".png", ".webp"],
+  UPLOAD_IMG_TYPES: [".jpeg", ".jpg",".webp", ".png" ],
   AMOUNT: 50,
   SHIPPING_METHOD: ["free", "nova post", "ukr post"],
-  ORDER_STATUS: ["new", "paid", "confirm", "shipped", "delivered", "canceled"],
+  ORDER_STATUS: ["new",  "confirm","canceled", "shipped", "delivered","paid" ],
   STRIPE_SECRET_KEY: "pk_test_TYooMQauvdEDq54NiTphI7jx",
   CLIENT_URL: "http://localhost:5173",
 };
