@@ -10,10 +10,9 @@ const CONSTANTS = {
   UPLOAD_FOLDER: "uploads/",
   UPLOAD_IMG_TYPES: [".jpeg", ".jpg",".webp", ".png" ],
   AMOUNT: 50,
-  SHIPPING_METHOD: ["free", "nova post", "ukr post"],
+  SHIPPING_METHOD: ["nova post","ukr post", "free" ],
   ORDER_STATUS: ["new",  "confirm","canceled", "shipped", "delivered","paid" ],
   STRIPE_SECRET_KEY: "pk_test_TYooMQauvdEDq54NiTphI7jx",
   CLIENT_URL: "http://localhost:5173",
 };
-
 module.exports = CONSTANTS;
