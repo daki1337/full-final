@@ -8,14 +8,14 @@ module.exports.isOwner = async (req, res, next) => {
   if (req.params.idUser === req.user._id.toString()) {
     return next();
   }
-  next(createError(403, "Only owner"));
+  next(createError(403, "Only for owners"));
 };
 
 module.exports.isAdmin = async (req, res, next) => {
   if (req.user?.role === "admin") {
     return next();
   }
-  next(createError(403, "Only admin"));
+  next(createError(403, "Only for admins"));
 };
 module.exports.canUpdateOrderStatus = async (req, res, next) => {
   try {
@@ -29,7 +29,7 @@ module.exports.canUpdateOrderStatus = async (req, res, next) => {
     ) {
       return next();
     }
-    next(createError(403, "You do not have permission"));
+    next(createError(403, "Access denied"));
   } catch (error) {
     next(error);
   }
