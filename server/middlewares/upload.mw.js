@@ -1,13 +1,6 @@
-const path = require('path');
-const multer = require('multer');
 const CONSTANTS = require('../constants');
-
-const storage = multer.diskStorage({
-  destination: CONSTANTS.UPLOAD_FOLDER,
-  filename: (req, file, cb) => {
-    cb(null, Date.now() + '-' + file.originalname);
-  },
-});
+const multer = require('multer');
+const path = require('path');
 
 const fileFilter = (req, file, cb) => {
   const fileExt = path.extname(file.originalname.toLowerCase()); 
@@ -25,3 +18,13 @@ const upload = multer({
 });
 
 module.exports = upload;
+
+const storage = multer.diskStorage({
+  destination: CONSTANTS.UPLOAD_FOLDER,
+  filename: (req, file, cb) => {
+    cb(null, Date.now() + '-' + file.originalname);
+  },
+});
+
+
+
